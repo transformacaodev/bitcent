@@ -1,12 +1,7 @@
-import transacoesFalsas from "@/data/constants/transacoesFalsas";
-import AutenticacaoContext from "@/data/contexts/AutenticacaoContext";
 import useTransacao, { TipoExibicao } from "@/data/hooks/useTransacao";
-import servicos from "@/logic/core";
-import Id from "@/logic/core/comum/Id";
-import Transacao, { transacaoVazia } from "@/logic/core/financas/Transacao";
+import { transacaoVazia } from "@/logic/core/financas/Transacao";
 import { Button, SegmentedControl } from "@mantine/core";
 import { IconLayoutGrid, IconList, IconPlus } from "@tabler/icons-react";
-import { useContext, useState } from "react";
 import Cabecalho from "../template/Cabecalho";
 import CampoMesAno from "../template/CampoMesAno";
 import Conteudo from "../template/Conteudo";
@@ -66,7 +61,7 @@ export default function Financas() {
                         excluir={excluir}
                         cancelar={() => selecionar(null)}
                     />
-                ) : transacoes.length ? (
+                ) : transacoes.length > 0 ? (
                     renderizarTransacoes()
                 ) : (
                     <NaoEncontrado>
