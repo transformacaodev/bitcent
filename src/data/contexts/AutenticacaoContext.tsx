@@ -1,6 +1,5 @@
 import servicos from "@/logic/core"
 import Usuario from "@/logic/core/usuario/Usuario"
-import Autenticacao from "@/logic/firebase/auth/Autenticacao"
 import { createContext, useEffect, useState } from "react"
 
 interface AutenticacaoProps {
@@ -20,7 +19,6 @@ const AutenticacaoContext = createContext<AutenticacaoProps>({
 })
 
 export function AutenticacaoProvider(props: any) {
-
     const [carregando, setCarregando] = useState<boolean>(true)
     const [usuario, setUsuario] = useState<Usuario | null>(null)
 

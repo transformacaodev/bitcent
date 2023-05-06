@@ -4,7 +4,7 @@ import ImagemResponsiva from "../comum/ImagemResponsiva"
 export interface VantagemProps {
     imagem: any
     titulo: string
-    subtitulo?: string
+    subtitulo: string
     inverter?: boolean
 }
 
@@ -26,11 +26,9 @@ export default function Vantagem(props: VantagemProps) {
                     flex flex-col text-white
                     font-black text-2xl sm:text-4xl
                 `}>{props.titulo}</div>
-                {props.subtitulo && (
-                    <span className="font-light text-base sm:text-lg text-zinc-500">
-                        {props.subtitulo}
-                    </span>
-                )}
+                <span className="font-light text-base sm:text-lg text-zinc-500">
+                    {props.subtitulo}
+                </span>                
             </div>
         </div>
     )
