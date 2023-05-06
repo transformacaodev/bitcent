@@ -1,6 +1,6 @@
-<h1 align="center">
-Olá Devs! 👋
-</h1>
+<p align="center">
+<img src=".github/logo.png" alt="Logo" width="100" />
+</p>
 
 <p align="center">
  Repositório Bitcent <b>versão completa</b>
