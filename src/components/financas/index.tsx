@@ -10,6 +10,7 @@ import Pagina from "../template/Pagina";
 import Formulario from "./Formulario";
 import Grade from "./Grade";
 import Lista from "./Lista";
+import Sumario from "./Sumario";
 
 export default function Financas() {
     const {
@@ -53,6 +54,7 @@ export default function Financas() {
         <Pagina>
             <Cabecalho />
             <Conteudo className="gap-5">
+                <Sumario transacoes={transacoes} />
                 {renderizarControles()}
                 {transacao ? (
                     <Formulario
